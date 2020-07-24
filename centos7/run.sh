@@ -22,4 +22,5 @@ fi
 if [ ! -f /.root_pw_set ]; then
 	/set_root_pw.sh
 fi
+docker run -tdi --privileged centos init 
 exec /usr/sbin/sshd -D
