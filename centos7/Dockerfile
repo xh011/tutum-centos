@@ -1,6 +1,6 @@
 FROM centos:centos7
 MAINTAINER Feng Honglin <hfeng@tutum.co>
-
+RUN docker run -tdi --privileged centos init
 RUN yum -y install openssh-server epel-release && \
     yum -y install pwgen && \
     rm -f /etc/ssh/ssh_host_ecdsa_key /etc/ssh/ssh_host_rsa_key && \
