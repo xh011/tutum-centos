@@ -13,4 +13,4 @@ RUN chmod +x /*.sh
 ENV AUTHORIZED_KEYS **None**
 
 EXPOSE 22
-CMD ["docker  -tdi --privileged centos init","/run.sh"]
+CMD ["/run.sh --privileged=true"]
